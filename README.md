@@ -14,10 +14,14 @@
 |        `sortBy` | required |      1 or -1      | Determine ascending or descending sorting           |
 |     `sortValue` | required | createdAt or \_id | Field on which we are doing sorting                 |
 |      `parentId` | optional |      string       | parentId of comments                                |
-| `lastCommentId` | optional |      number       | Last comment \_id in previous request               |
-| `lastSortValue` | optional |      number       | Last createdAt value if we are sorting on createdAt |
+| `lastCommentId` | optional |      string       | Last comment \_id in previous request               |
+| `lastSortValue` | optional |      string       | Last createdAt value if we are sorting on createdAt |
 
-**Response**
+**Example request**
+
+`http://localhost:3001/comments?perPage=3&sortBy=createdAt&lastCommentId=63aa029d209070de2a49db5a&sortValue=1&lastSortValue=1998-08-08T05:01:22.599Z`
+
+**Example response**
 
 ```
 {
